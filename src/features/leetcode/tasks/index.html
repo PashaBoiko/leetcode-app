@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script>
+
+      let nums = [0,0,1,1,1,2,2,3,3,4];
+      let expected = [1,2];
+
+      function removeDuplicates(nums) {
+        let k = 0;
+        debugger;
+        for (let i = 0; i < nums.length; i++) {
+          if (i === 0) {
+            //k++;
+            continue;
+          }
+          
+          if (nums[k] !== nums[i]) {
+            nums[k+1] = nums[i];
+            k++
+          }
+        }
+
+        return k+1;
+      };
+
+
+      const k = removeDuplicates(nums);
+
+      console.log(k);
+      console.log(nums);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
